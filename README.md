@@ -30,17 +30,17 @@
 * 测试 `test.json`
 * 开发 `dev.json`
 * 生产 `prod.json`
-![运行配置](assets/images/14.png)
+![运行配置](assets/images/14.jpg)
 
 
 # 欢迎加我一起学习讨论，注明：flutter学习
-![扫码加我](assets/images/13.png)  
+![扫码加我](assets/images/13.jpg)  
 
 
 ## 页面截图
-![发现](assets/images/12.png)
-![发现](assets/images/11.png)
-![发现](assets/images/15.png)
+![发现](assets/images/12.jpg)
+![发现](assets/images/11.jpg)
+![发现](assets/images/15.jpg)
 
 
 ## 问题
