@@ -1,0 +1,5 @@
+{
+  "ENV": "prod",
+  "BASE_URL": "https://app.wanris.com/m.api",
+  "DEFAULT_AVATAR": "https://fd-fresh-mall.oss-cn-hangzhou.aliyuncs.com/online_images/default-avatar.png"
+}

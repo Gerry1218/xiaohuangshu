@@ -1,0 +1,5 @@
+{
+  "ENV": "dev",
+  "BASE_URL": "http://192.168.0.8:8088/m.api",
+  "DEFAULT_AVATAR": "https://fd-fresh-mall.oss-cn-hangzhou.aliyuncs.com/online_images/default-avatar.png"
+}

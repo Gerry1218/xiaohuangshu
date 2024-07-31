@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:xhs/constants/environment.dart';
 import 'package:xhs/pages/IndexPage.dart';
 import 'package:xhs/pages/home/Home.dart';
+import 'package:xhs/test/ExpandedPage.dart';
 import 'package:xhs/test/ScrollTabPage.dart';
 import 'package:xhs/test/TestPage.dart';
 import 'package:xhs/test/testRefreshPage.dart';
 
-void main() {
+void main() async {
+  debugPrint("Current Env: ${Environment.env}");
   runApp(const MyApp());
 }
 
@@ -17,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -88,7 +92,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme
+            .of(context)
+            .colorScheme
+            .inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
@@ -117,7 +124,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .headlineMedium,
             ),
             ElevatedButton(
                 onPressed: () {
@@ -144,6 +154,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   toScrollTabPage();
                 },
                 child: Text("ScrollTabPage")),
+            ElevatedButton(
+                onPressed: () {
+                  toExpandedPage();
+                },
+                child: Text("ExpandedPage")),
           ],
         ),
       ),
@@ -193,5 +208,10 @@ class _MyHomePageState extends State<MyHomePage> {
         MaterialPageRoute<void>(
           builder: (BuildContext context) => const ScrollTabPage(),
         ));
+  }
+
+  toExpandedPage() {
+    Navigator.push(context, MaterialPageRoute(
+        builder: (BuildContext content) => const ExpandedPage()));
   }
 }

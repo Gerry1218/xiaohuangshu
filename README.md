@@ -26,20 +26,32 @@
 [✓] VS Code (version 1.91.1)
 ```
 
+# 运行环境配置
+* 测试 `test.json`
+* 开发 `dev.json`
+* 生产 `prod.json`
+![运行配置](assets/images/14.png)
+
 
 # 欢迎加我一起学习讨论，注明：flutter学习
-![扫码加我](WechatIMG135.jpg)  
+![扫码加我](assets/images/13.png)  
 
 
 ## 页面截图
-![发现](Screenshot_20240725_143046.png)  
+![发现](assets/images/12.png)
+![发现](assets/images/11.png)
+![发现](assets/images/15.png)
 
+
+## 问题
+* AppBar标题和左边按钮，有间隔？
+* 嵌套scrollview，当滚动到最后一个再滑动时，事件传递给父scrollview？
 
 ## 感谢Flutter开源项目(排名不分先后)
-[仿小红书](https://github.com/MrNocLb/flutter_RedBook)
-[仿小红书](https://github.com/huang-weilong/flutter_xhs)
-[仿豆瓣](https://github.com/kaina404/FlutterDouBan)
-[仿微博](https://github.com/huangruiLearn/flutter_hrlweibo)
+* [仿小红书](https://github.com/MrNocLb/flutter_RedBook)
+* [仿小红书](https://github.com/huang-weilong/flutter_xhs)
+* [仿豆瓣](https://github.com/kaina404/FlutterDouBan)
+* [仿微博](https://github.com/huangruiLearn/flutter_hrlweibo)
 
 
 

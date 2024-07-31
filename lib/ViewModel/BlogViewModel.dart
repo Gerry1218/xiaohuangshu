@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:rxdart/rxdart.dart';
-import 'package:xhs/core/Api.dart';
-import 'package:xhs/core/HTTP/Constants.dart';
+import 'package:xhs/core/api/api.dart';
+import 'package:xhs/core/http/constants.dart';
 import 'package:xhs/pages/home/Model/BlogModel.dart';
 
 class BlogViewModel {

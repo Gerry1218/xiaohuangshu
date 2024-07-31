@@ -1,4 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:xhs/constants/environment.dart';
+import 'package:xhs/model/DataCenter.dart';
 
 class HttpService {
   static final HttpService _instance = HttpService._internal();
@@ -21,7 +24,13 @@ class HttpService {
     return dio!.get(url, queryParameters: params);
   }
 
-  Future<Response<T>> post<T>(String url, {Map<String, dynamic>? params}) async {
+  Future<Response<T>> post<T>(
+      {String url = Environment.baseUrl, Map<String, dynamic>? params}) async {
+    if (DataCenter().currentUserModel != null) {
+      var token = DataCenter().currentUserModel!.accessToken;
+      dio?.options.headers['access-token'] = token;
+    }
+    debugPrint("http post header: ${dio?.options.headers}");
     return dio!.post(url, data: params);
   }
 }

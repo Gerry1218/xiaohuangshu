@@ -1,16 +1,19 @@
 import 'dart:convert';
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:xhs/ViewModel/BlogViewModel.dart';
 import 'package:xhs/ViewModel/PostModel.dart';
+import 'package:xhs/components/common_widget.dart';
 import 'package:xhs/constants/color_constants.dart';
+import 'package:xhs/pages/blog/blog_detail.dart';
 import 'package:xhs/pages/home/Model/BlogModel.dart';
-import 'package:xhs/utils/HelpUtils.dart';
+import 'package:xhs/utils/help_utils.dart';
 import 'package:xhs/utils/padding_extension.dart';
+
+import '../../core/http/constants.dart';
 
 class FollowPage extends StatefulWidget {
   FollowPage({super.key, required this.categoryId});
@@ -75,10 +78,11 @@ class _FollowPageState extends State<FollowPage>
           children: [
             ClipRRect(
               borderRadius: brTopLR8,
-              child: CachedNetworkImage(
-                imageUrl: HelpUtils.ossImageUrl(item.imgUrls![0]),
-                fit: BoxFit.fill,
-              ),
+              child: CommonWidget.networkImage(imageUrl: HelpUtils.ossImageUrl(item.imgUrls![0]))
+            // CachedNetworkImage(
+            //     imageUrl: HelpUtils.ossImageUrl(item.imgUrls![0]),
+            //     fit: BoxFit.fill,
+            //   ),
             ),
             5.paddingHeight,
             Padding(
@@ -106,10 +110,11 @@ class _FollowPageState extends State<FollowPage>
                             child: SizedBox(
                                 width: 20,
                                 height: 20,
-                                child: CachedNetworkImage(
-                                  imageUrl: item.avatarUrl!,
-                                  fit: BoxFit.fill,
-                                )),
+                                child: CommonWidget.networkImage(imageUrl: item.avatarUrl??kDefaultAvatar)),
+                                // CachedNetworkImage(
+                                //   imageUrl: item.avatarUrl!,
+                                //   fit: BoxFit.fill,
+                                // )),
                           ),
                           4.paddingWidth,
                           ConstrainedBox(
@@ -142,6 +147,12 @@ class _FollowPageState extends State<FollowPage>
             ),
           ],
         ),
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => BlogDetailPage(model: item)));
+        },
       ),
     );
   }
