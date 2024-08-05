@@ -77,6 +77,60 @@ class _BlogDetailPageState extends State<BlogDetailPage> {
     return Scaffold(
       appBar: _buildAppBar(),
       body: _buildContent(),
+      bottomNavigationBar: _buildToolbar(),
+    );
+  }
+
+  _buildToolbar() {
+    return Container(
+      decoration:
+          const BoxDecoration(border: Border(top: BorderSide(color: colorF1))),
+      height: 44,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+              child: GestureDetector(
+                onTap: () {
+
+                },
+                child: Padding(
+            padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+            child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
+                child: Container(
+                  color: colorF1,
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  height: 30,
+                  child: Row(
+                    children: [
+                      const Icon(Icons.edit, size: 20, color: color999),
+                      5.paddingWidth,
+                      Text(
+                        "说点什么",
+                        style:
+                            TextStyle(fontSize: 13, color: Colors.grey.shade600),
+                      )
+                    ],
+                  ),
+                ),
+            ),
+          ),
+              )),
+          Container(
+            padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+            child: const Row(
+              children: [Icon(Icons.favorite_border_rounded), Text("1.01w")],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+            child: const Row(
+              children: [Icon(Icons.star_border_rounded), Text("1.2k")],
+            ),
+          )
+        ],
+      ),
     );
   }
 
@@ -117,7 +171,7 @@ class _BlogDetailPageState extends State<BlogDetailPage> {
                   _buildSwiper(),
                   _buildContentTitle(),
                   ..._buildContentComment(),
-                  _buildCommentList(snapshot)
+                  _buildCommentList(snapshot),
                 ],
               ),
             );
@@ -245,9 +299,7 @@ class _BlogDetailPageState extends State<BlogDetailPage> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            BlogContentWidget(
-                              model: item
-                            ),
+                            BlogContentWidget(model: item),
                             if (false)
                               GestureDetector(
                                 onTap: () {

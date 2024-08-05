@@ -3,8 +3,10 @@ import 'package:xhs/constants/environment.dart';
 import 'package:xhs/pages/IndexPage.dart';
 import 'package:xhs/pages/home/Home.dart';
 import 'package:xhs/test/ExpandedPage.dart';
+import 'package:xhs/test/MyNestedScrollView.dart';
 import 'package:xhs/test/ScrollTabPage.dart';
 import 'package:xhs/test/TestPage.dart';
+import 'package:xhs/test/TestPage1.dart';
 import 'package:xhs/test/testRefreshPage.dart';
 
 void main() async {
@@ -129,36 +131,55 @@ class _MyHomePageState extends State<MyHomePage> {
                   .textTheme
                   .headlineMedium,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  toHomePage();
-                },
-                child: Text("HomePage")),
-            ElevatedButton(
-                onPressed: () {
-                  toHome();
-                },
-                child: Text("Home")),
-            ElevatedButton(
-                onPressed: () {
-                  toTestPage();
-                },
-                child: Text("TestPage")),
-            ElevatedButton(
-                onPressed: () {
-                  toRefreshPage();
-                },
-                child: Text("RefreshPage")),
-            ElevatedButton(
-                onPressed: () {
-                  toScrollTabPage();
-                },
-                child: Text("ScrollTabPage")),
-            ElevatedButton(
-                onPressed: () {
-                  toExpandedPage();
-                },
-                child: Text("ExpandedPage")),
+            //
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      toHomePage();
+                    },
+                    child: Text("HomePage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toHome();
+                    },
+                    child: Text("Home")),
+                ElevatedButton(
+                    onPressed: () {
+                      toTestPage();
+                    },
+                    child: Text("TestPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toRefreshPage();
+                    },
+                    child: Text("RefreshPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toScrollTabPage();
+                    },
+                    child: Text("ScrollTabPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toExpandedPage();
+                    },
+                    child: Text("ExpandedPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toSwiperPage();
+                    },
+                    child: Text("SwipPage-TestPage1")),
+                ElevatedButton(
+                    onPressed: () {
+                      toNestedScrollPage();
+                    },
+                    child: Text("Nested Scroll Page"))
+              ],
+            )
+            ,
+
           ],
         ),
       ),
@@ -213,5 +234,15 @@ class _MyHomePageState extends State<MyHomePage> {
   toExpandedPage() {
     Navigator.push(context, MaterialPageRoute(
         builder: (BuildContext content) => const ExpandedPage()));
+  }
+
+  toSwiperPage() {
+    Navigator.push(context, MaterialPageRoute(
+        builder: (BuildContext content) => const TestPage1()));
+  }
+
+  toNestedScrollPage() {
+    Navigator.push(context, MaterialPageRoute(
+        builder: (BuildContext content) => const MyNestedScrollView()));
   }
 }
