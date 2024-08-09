@@ -45,7 +45,29 @@ class _TestPageState extends State<TestPage> {
     return Container(
       color: Colors.white,
       padding: EdgeInsets.fromLTRB(10, 100, 10, 0),
-      child: Text("TestPage"),
+      child:Row(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.blue,
+          ),
+          Column(
+            children: [
+              Container(
+                color: Colors.amberAccent,
+                width: 100,
+                height: 40,
+              ),
+              Container(
+                width: 100,
+                height: 70,
+                color: Colors.cyan,
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 

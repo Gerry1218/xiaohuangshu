@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xhs/constants/environment.dart';
 import 'package:xhs/pages/IndexPage.dart';
 import 'package:xhs/pages/home/Home.dart';
+import 'package:xhs/test/DownloadPage.dart';
 import 'package:xhs/test/ExpandedPage.dart';
 import 'package:xhs/test/MyNestedScrollView.dart';
 import 'package:xhs/test/ScrollTabPage.dart';
@@ -175,7 +176,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {
                       toNestedScrollPage();
                     },
-                    child: Text("Nested Scroll Page"))
+                    child: Text("Nested Scroll Page")),
+                ElevatedButton(
+                    onPressed: () {
+                      toDownloadPage();
+                    },
+                    child: Text("Download Page"))
               ],
             )
             ,
@@ -244,5 +250,10 @@ class _MyHomePageState extends State<MyHomePage> {
   toNestedScrollPage() {
     Navigator.push(context, MaterialPageRoute(
         builder: (BuildContext content) => const MyNestedScrollView()));
+  }
+
+  toDownloadPage() {
+    Navigator.push(context, MaterialPageRoute(
+        builder: (BuildContext content) => const DownloadPage()));
   }
 }
