@@ -26,11 +26,26 @@
 [✓] VS Code (version 1.91.1)
 ```
 
+# 拼音库
+```
+# 含汉字库(20378个)、unicode码，多音字库(9874词库)
+assets/pinyin
+```
+
 # 运行环境配置
 * 测试 `test.json`
 * 开发 `dev.json`
 * 生产 `prod.json`
 ![运行配置](assets/images/14.jpg)
+
+# 命令行
+```shell
+# 运行
+flutter run --dart-define-from-file=.env/dev.json
+
+# 打包 
+flutter build apk --dart-define-from-file=.env/prod.json
+```
 
 
 # 欢迎加我一起学习讨论，注明：flutter学习

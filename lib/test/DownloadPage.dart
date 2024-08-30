@@ -29,9 +29,9 @@ class _DownloadPageStatefulWidgetState extends State<DownloadPageStatefulWidget>
   int percent = 0;
 
   Future<void> _futureWork() {
-    return Future.delayed(const Duration(seconds: 1), () =>
+    return Future.delayed(const Duration(milliseconds: 10), () =>
         setState(() {
-          _counter = _counter + 0.1;
+          _counter = _counter + 0.01;
         })
     );
   }

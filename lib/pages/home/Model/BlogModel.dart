@@ -54,7 +54,7 @@ class BlogModel {
         gmtCreate: json["gmtCreate"],
         groupId: json["groupId"],
         id: json["id"],
-        imgUrls: jsonDecode(json["imgUrls"]).cast<String>(),
+        imgUrls: json["imgUrls"] == null ? [] : List<String>.from(jsonDecode(json["imgUrls"]!)),
         likeCount: json["likeCount"],
         type: json["type"],
         userId: json["userId"],

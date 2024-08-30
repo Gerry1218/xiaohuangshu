@@ -36,19 +36,19 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
+    debugPrint("didChangeDependencies");
     super.didChangeDependencies();
   }
 
   @override
   void didUpdateWidget(covariant Home oldWidget) {
-    // TODO: implement didUpdateWidget
+    debugPrint("didUpdateWidget");
     super.didUpdateWidget(oldWidget);
   }
 
   @override
   void deactivate() {
-    // TODO: implement deactivate
+    debugPrint("deactivate");
     super.deactivate();
   }
 
