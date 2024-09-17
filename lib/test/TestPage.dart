@@ -1,6 +1,10 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
+
+import 'bottom_sheet_navigator.dart';
 
 class TestPage extends StatefulWidget {
   const TestPage({super.key});
@@ -43,17 +47,33 @@ class _TestPageState extends State<TestPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.greenAccent,
       padding: EdgeInsets.fromLTRB(10, 100, 10, 0),
-      child:Row(
+      child: Row(
         children: [
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.blue,
-          ),
+          // Container(
+          //   width: 100,
+          //   height: 100,
+          //   color: Colors.blue,
+          // ),
           Column(
             children: [
+              TextButton(
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return BottomSheetNavigator();
+                      },
+                    );
+                  },
+                  child: const Text(
+                    "点击事件",
+                    style: TextStyle(
+                        color: Colors.amber,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w500),
+                  )),
               Container(
                 color: Colors.amberAccent,
                 width: 100,
@@ -63,6 +83,27 @@ class _TestPageState extends State<TestPage> {
                 width: 100,
                 height: 70,
                 color: Colors.cyan,
+              ),
+              Container(
+                // color: Colors.amber,
+                // margin: EdgeInsets.symmetric(horizontal: 50),
+                child: ClipRRect(
+                  // borderRadius: BorderRadius.all(Radius.circular(10)),
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(
+                      sigmaX: 20,
+                      sigmaY: 20,
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white10
+                      ),
+                      // color: Colors.white10,
+                      padding: EdgeInsets.all(8),
+                      child: Text("Hello world"),
+                    ),
+                  ),
+                ),
               )
             ],
           )
