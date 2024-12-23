@@ -5,8 +5,10 @@ import 'package:xhs/pages/me/me.dart';
 import 'package:xhs/pages/shopping/shopping.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage>
