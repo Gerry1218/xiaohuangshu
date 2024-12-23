@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:xhs/constants/color_constants.dart';
-import 'package:xhs/pages/home/DiscoverPage.dart';
-import 'package:xhs/pages/home/FollowPage.dart';
-import 'package:xhs/pages/home/MyCity.dart';
+import 'package:xhs/pages/home/discover_page.dart';
+import 'package:xhs/pages/home/follow_page.dart';
+import 'package:xhs/pages/home/my_city.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

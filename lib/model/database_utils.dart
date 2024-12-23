@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:xhs/core/api/api.dart';
-import 'package:xhs/pages/home/Model/UserModel.dart';
+import 'package:xhs/pages/home/Model/user_model.dart';
 
 class DatabaseUtils {
   static final DatabaseUtils _instance = DatabaseUtils._();

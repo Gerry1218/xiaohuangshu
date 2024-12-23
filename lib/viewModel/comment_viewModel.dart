@@ -5,7 +5,7 @@ import 'package:rxdart/rxdart.dart';
 
 import '../core/api/api.dart';
 import '../core/HTTP/constants.dart';
-import '../pages/home/Model/CommentItemModel.dart';
+import '../pages/home/Model/comment_item_model.dart';
 
 class CommentViewModel {
   List<CommentItemModel> comments = [];

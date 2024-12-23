@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'ExpandedText.dart';
+import 'expanded_text.dart';
 
 class ExpandedPage extends StatefulWidget {
   const ExpandedPage({super.key});
@@ -15,10 +15,10 @@ class _ExpandedPageState extends State<ExpandedPage> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.orange,
-      padding: EdgeInsets.all(20),
-      child:  ExpandableText(
-        text:
-            '我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据', maxLines: null,
+      padding: EdgeInsets.fromLTRB(20, 60, 20, 0),
+      child: ExpandableText(
+        text: '我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据，我是一个测试的数据',
+        maxLines: 2,
       ),
     );
   }

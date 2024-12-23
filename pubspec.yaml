@@ -59,6 +59,12 @@ dependencies:
   # sqlLite数据库
   sqflite: ^2.3.2
 
+  # bloc
+  equatable: ^2.0.3
+  flutter_bloc: ^8.1.6
+
+  # getx
+  get: ^4.6.6
 
 
 dev_dependencies:

@@ -1,4 +1,4 @@
-import 'package:xhs/pages/home/Model/UserModel.dart';
+import 'package:xhs/pages/home/Model/user_model.dart';
 
 class DataCenter {
   DataCenter._();

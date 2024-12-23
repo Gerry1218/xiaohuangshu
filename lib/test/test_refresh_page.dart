@@ -62,6 +62,10 @@ class _TestRefreshPageState extends State<TestRefreshPage> {
         },
         child: ListView.builder(
           itemBuilder: (context, index) {
+            EasyRefresh? er = context.findAncestorWidgetOfExactType<EasyRefresh>();
+            if (er != null) {
+              er.child;
+            }
             return Card(
               child: Container(
                 alignment: Alignment.center,

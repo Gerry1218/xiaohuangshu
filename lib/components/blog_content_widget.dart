@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xhs/pages/home/Model/CommentItemModel.dart';
+import 'package:xhs/pages/home/Model/comment_item_model.dart';
 import 'package:xhs/utils/help_utils.dart';
 import 'package:xhs/utils/padding_extension.dart';
 

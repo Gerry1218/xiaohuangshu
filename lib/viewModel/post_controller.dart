@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:rxdart/rxdart.dart';
 
-import 'PostModel.dart';
+import 'post_model.dart';
 
 class PostController implements IPostController {
   final List<PostModel> initPostModelList;

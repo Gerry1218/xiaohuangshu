@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:xhs/constants/environment.dart';
-import 'package:xhs/model/DataCenter.dart';
+import 'package:xhs/model/data_center.dart';
 
 class HttpService {
   static final HttpService _instance = HttpService._internal();

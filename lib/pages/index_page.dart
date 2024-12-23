@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:xhs/pages/cart/Cart.dart';
-import 'package:xhs/pages/home/Home.dart';
-import 'package:xhs/pages/me/Me.dart';
-import 'package:xhs/pages/shopping/Shopping.dart';
+import 'package:xhs/pages/cart/cart.dart';
+import 'package:xhs/pages/home/home.dart';
+import 'package:xhs/pages/me/me.dart';
+import 'package:xhs/pages/shopping/shopping.dart';
 
 class HomePage extends StatefulWidget {
   @override

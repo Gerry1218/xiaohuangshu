@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:xhs/pages/home/FollowPage.dart';
+import 'package:xhs/pages/home/follow_page.dart';
 
 class MyCityPage extends StatefulWidget {
   const MyCityPage({super.key});

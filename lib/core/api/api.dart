@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:xhs/core/http/constants.dart';
-import 'package:xhs/pages/home/Model/BlogModel.dart';
-import 'package:xhs/pages/home/Model/UserModel.dart';
+import 'package:xhs/pages/home/Model/blog_model.dart';
+import 'package:xhs/pages/home/Model/user_model.dart';
 
-import '../../pages/home/Model/CommentItemModel.dart';
+import '../../pages/home/Model/comment_item_model.dart';
 import '../http/http_service.dart';
 
 class Api {

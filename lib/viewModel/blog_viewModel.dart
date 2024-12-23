@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:rxdart/rxdart.dart';
 import 'package:xhs/core/api/api.dart';
 import 'package:xhs/core/http/constants.dart';
-import 'package:xhs/pages/home/Model/BlogModel.dart';
+import 'package:xhs/pages/home/Model/blog_model.dart';
 
 class BlogViewModel {
   // 没有更多数据

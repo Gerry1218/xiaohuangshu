@@ -4,18 +4,18 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:xhs/ViewModel/CommentViewModel.dart';
+import 'package:xhs/ViewModel/comment_viewModel.dart';
 import 'package:xhs/components/blog_content_widget.dart';
 import 'package:xhs/components/common_widget.dart';
 import 'package:xhs/core/api/api.dart';
-import 'package:xhs/model/DataCenter.dart';
-import 'package:xhs/model/DatabaseUtils.dart';
-import 'package:xhs/pages/home/Model/CommentItemModel.dart';
+import 'package:xhs/model/data_center.dart';
+import 'package:xhs/model/database_utils.dart';
+import 'package:xhs/pages/home/Model/comment_item_model.dart';
 import 'package:xhs/utils/help_utils.dart';
 import 'package:xhs/utils/padding_extension.dart';
 
 import '../../constants/color_constants.dart';
-import '../home/Model/BlogModel.dart';
+import '../home/Model/blog_model.dart';
 
 class BlogDetailPage extends StatefulWidget {
   BlogDetailPage({super.key, required this.model});

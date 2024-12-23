@@ -4,12 +4,12 @@ import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:xhs/ViewModel/BlogViewModel.dart';
-import 'package:xhs/ViewModel/PostModel.dart';
+import 'package:xhs/ViewModel/blog_viewModel.dart';
+import 'package:xhs/ViewModel/post_model.dart';
 import 'package:xhs/components/common_widget.dart';
 import 'package:xhs/constants/color_constants.dart';
 import 'package:xhs/pages/blog/blog_detail.dart';
-import 'package:xhs/pages/home/Model/BlogModel.dart';
+import 'package:xhs/pages/home/Model/blog_model.dart';
 import 'package:xhs/utils/help_utils.dart';
 import 'package:xhs/utils/padding_extension.dart';
 
