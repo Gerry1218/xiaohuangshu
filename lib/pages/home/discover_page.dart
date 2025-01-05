@@ -71,12 +71,14 @@ class _DiscoverPageState extends State<DiscoverPage>
 
   _buildTabBar() {
     return TabBar(
+      padding: EdgeInsets.zero,
       labelColor: Colors.black87,
       unselectedLabelColor: Colors.black45,
       indicatorColor: Colors.transparent,
       controller: _tabController,
       isScrollable: true,
       tabs: _kTabs,
+      tabAlignment: TabAlignment.start,
     );
   }
 

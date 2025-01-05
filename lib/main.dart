@@ -5,8 +5,11 @@ import 'package:xhs/pages/home/home.dart';
 import 'package:xhs/test/chat_page.dart';
 import 'package:xhs/test/download_page.dart';
 import 'package:xhs/test/expanded_page.dart';
+import 'package:xhs/test/flashy_tabBar_page.dart';
 import 'package:xhs/test/getx/getx_page.dart';
+import 'package:xhs/test/google_navBar_page.dart';
 import 'package:xhs/test/gridview_paging.dart';
+import 'package:xhs/test/motion_tabBar_page.dart';
 import 'package:xhs/test/my_nested_scrollView.dart';
 import 'package:xhs/test/scroll_tab_page.dart';
 import 'package:xhs/test/test_bloc.dart';
@@ -129,9 +132,30 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Text("GridviewPaging")),
                 ElevatedButton(
                     onPressed: () {
-                      toPage(const ChatPage());
+                      // toPage(const ChatPage());
+                      test();
+                      debugPrint("xxxx");
+                      roomId = 0;
+                      Future.delayed(Duration(seconds: 1), (){
+                        roomId = 10;
+                      });
                     },
-                    child: Text("ChatPage"))
+                    child: Text("ChatPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toPage(const MotionTabbarPage());
+                    },
+                    child: Text("MotionTabbarPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toPage(const GoogleNavbarPage());
+                    },
+                    child: Text("GoogleNavbarPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toPage(const FlashyTabbarPage());
+                    },
+                    child: Text("FlashyTabbarPage"))
               ],
             )
             ,
@@ -140,6 +164,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+  }
+
+  int roomId = 10;
+  test() async {
+    debugPrint(" $roomId");
   }
 
   toRefreshPage() {

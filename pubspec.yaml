@@ -66,6 +66,16 @@ dependencies:
   # getx
   get: ^4.6.6
 
+  # tabBar
+  motion_tab_bar: ^2.0.4
+  google_nav_bar: ^5.0.7
+  flashy_tab_bar2: ^0.0.10
+
+  # line图标
+  line_icons: ^2.0.3
+
+
+
 
 dev_dependencies:
   flutter_test:
