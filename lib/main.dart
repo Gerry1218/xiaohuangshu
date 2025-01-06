@@ -1,11 +1,15 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:xhs/constants/environment.dart';
 import 'package:xhs/pages/index_page.dart';
 import 'package:xhs/pages/home/home.dart';
+import 'package:xhs/test/animated_notch_bottom_bar_page.dart';
 import 'package:xhs/test/chat_page.dart';
 import 'package:xhs/test/download_page.dart';
 import 'package:xhs/test/expanded_page.dart';
 import 'package:xhs/test/flashy_tabBar_page.dart';
+import 'package:xhs/test/floating_bottom_bar_page.dart';
 import 'package:xhs/test/getx/getx_page.dart';
 import 'package:xhs/test/google_navBar_page.dart';
 import 'package:xhs/test/gridview_paging.dart';
@@ -155,7 +159,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {
                       toPage(const FlashyTabbarPage());
                     },
-                    child: Text("FlashyTabbarPage"))
+                    child: Text("FlashyTabbarPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toPage(const FloatingBottomBarPage());
+                    },
+                    child: Text("FloatingBottomBarPage")),
+                ElevatedButton(
+                    onPressed: () {
+                      toPage(const AnimatedNotchBottomBarPage());
+                    },
+                    child: Text("AnimatedNotchBottomBarPage"))
               ],
             )
             ,
